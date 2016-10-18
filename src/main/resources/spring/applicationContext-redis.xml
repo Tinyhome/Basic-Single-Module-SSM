@@ -8,13 +8,15 @@
         <constructor-arg index="1">
             <list>
                 <bean name="slaver" class="redis.clients.jedis.JedisShardInfo">
-                    <constructor-arg index="0" value="${redis.host}"/>
-                    <constructor-arg index="1" value="${redis.port}" type="int"/>
-                    <constructor-arg index="2" value="${redis.timeout}" type="int"/>
+                    <constructor-arg index="0" value="${redis.slaver.host}"/>
+                    <constructor-arg index="1" value="${redis.slaver.port}" type="int"/>
+                    <constructor-arg index="2" value="${redis.slaver.timeout}" type="int"/>
                 </bean>
-                <!--   <bean name="master" class="redis.clients.jedis.JedisShardInfo">
+                <!--
+                <bean name="master" class="redis.clients.jedis.JedisShardInfo">
                     <constructor-arg index="0" value="${redis.master.host}"/>
                     <constructor-arg index="1" value="${redis.master.port}" type="int"/>
+                    <constructor-arg index="2" value="${redis.master.timeout}" type="int"/>
                 </bean>
                 -->
             </list>
