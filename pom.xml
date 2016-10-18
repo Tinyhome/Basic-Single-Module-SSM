@@ -29,7 +29,8 @@
         <mybatis.version>3.3.1</mybatis.version>
         <mybatis-spring.version>1.2.4</mybatis-spring.version>
 
-
+        <!--2016-10-18增加redis-->
+        <redis-clients.version>2.7.3</redis-clients.version>
 
         <!--下面这两个是springAOP需要用到-->
         <aspectjweaver.version>1.7.2</aspectjweaver.version>
@@ -201,6 +202,12 @@
 
         <!-- ############################################################### Spring 相关包 end ############################################################### -->
 
+        <!--  -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${redis-clients.version}</version>
+        </dependency>
 
         <!-- mybatis核心包 -->
         <dependency>
