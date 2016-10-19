@@ -12,7 +12,7 @@
 	</bean>
 
 	<!-- 項目自定义的Realm, 所有userService依赖的dao都需要用depends-on声明 -->
-	<bean id="shiroDbRealm" class="com.org.xbwl.service.user.ShiroDbRealm">
+	<bean id="shiroDbRealm" class="com.youmeek.ssm.module.user.service.ShiroDbRealm">
 		<property name="userService" ref="userService"/>
 		<property name="permissionService" ref="permissionService"/>
 	</bean>
