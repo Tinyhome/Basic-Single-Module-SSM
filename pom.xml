@@ -32,6 +32,12 @@
         <!--2016-10-18增加redis-->
         <redis-clients.version>2.7.3</redis-clients.version>
 
+        <!--2016-10-19增加shiro-->
+        <shiro.version>1.2.3</shiro.version>
+
+        <!--2016-10-19增加编码方法的工具类包codec-->
+        <commons-codec.version>1.9</commons-codec.version>
+
         <!--下面这两个是springAOP需要用到-->
         <aspectjweaver.version>1.7.2</aspectjweaver.version>
         <persistence-api.version>1.0.2</persistence-api.version>
@@ -202,7 +208,7 @@
 
         <!-- ############################################################### Spring 相关包 end ############################################################### -->
 
-        <!--  -->
+        <!-- jedis包 -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
@@ -215,6 +221,7 @@
             <artifactId>mybatis</artifactId>
             <version>${mybatis.version}</version>
         </dependency>
+
         <!-- mybatis/spring包 -->
         <!--官网英文材料：http://www.mybatis.org/spring/-->
         <!--官网中文资料：http://www.mybatis.org/spring/zh/index.html-->
@@ -261,7 +268,27 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- java ee jar 包 -->
+        <!-- shiro包 -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+
+        <!--编码方法的工具类包codec-->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+
+
+        <!--java ee jar包-->
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
